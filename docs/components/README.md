@@ -14,7 +14,7 @@
 
 ## v-checkbox 
 
-A simple checkbox component NEWWW
+A simple checkbox component
 
 ```html
 <checkbox v-model="value"/>
