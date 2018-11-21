@@ -7,7 +7,7 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "parser": "node docs-generator.js",
+    "vdocs": "node docs-generator.js",
     "t1": "vuedoc.md checkbox.vue --output docs/",
     "t2": "vuedoc.md components/*.vue --level 2 --section 'Components' --output docs/components/README.md"
   },

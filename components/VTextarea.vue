@@ -8,11 +8,13 @@
 </template>
 
 <script>
+
   /**
    * The custom HTML `<textarea>` component.
    * 
-   * @author Sébastien
-   * @license MIT
+   * ```html
+   * <v-textarea id="text" label="Text"/>
+   * ```
    */
   export default {
     name: 'VTextarea',

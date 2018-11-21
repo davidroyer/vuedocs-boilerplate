@@ -1,6 +1,10 @@
 # VTextarea
 The custom HTML `<textarea>` component.
 
+```html
+<v-textarea id="text" label="Text"/>
+```
+
 ## Props
 
 - `label` ***String***

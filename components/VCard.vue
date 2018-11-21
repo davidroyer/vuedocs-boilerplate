@@ -13,6 +13,20 @@
 </template>
 
 <script>
+
+/**
+ * A basic card component that offers 2 slots to use:
+ * 1. Card Header
+ * 2. Card Body
+ * 3. Card Footer
+ *
+ * ```html
+ * <v-card heading="Card Header">
+ *  <div slot="body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eius corrupti a sint recusandae neque dolorum distinctio cupiditate. Unde non, odit praesentium odio, voluptate laboriosam eos quod vero ipsa nemo.</div>
+ *  <div slot="footer">Card Footer</div>
+ * </v-card>
+ * ```
+ */  
 export default {
   name: "VCard",
   props: {
