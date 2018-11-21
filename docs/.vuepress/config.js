@@ -2,7 +2,7 @@ const sidebarNav = require('./config/sidebar')
 const componentsPath = './../../components'
 
 module.exports = {
-    title: 'Vue Plugin Starter - Docs Boilerplate',
+    title: 'VueDocs',
     description: 'Working on a docs system to be used for Vue libraries and plugins',
     plugins: [
       ['@vuepress/register-components', {
