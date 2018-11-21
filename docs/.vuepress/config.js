@@ -14,11 +14,13 @@ module.exports = {
           { text: 'Home', link: '/' },
           { text: 'Components', link: '/components/' },
           { text: 'Guide', link: '/guide/' },
+          { text: 'Examples', link: '/examples/' },
+          { text: 'Chapter 2', link: '/chapter2/' },
           { text: 'External', link: 'https://google.com' },
         ],
         // sidebar: 'auto',
-        displayAllHeaders: true, // Default: false
+        // displayAllHeaders: true, // Default: false
         sidebar: sidebarNav,
-        sidebarDepth: 4
+        // sidebarDepth: 4
       }    
   }

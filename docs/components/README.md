@@ -1,6 +1,5 @@
 ---
 title: Components
-sidebar: true
 ---
 # Components
 

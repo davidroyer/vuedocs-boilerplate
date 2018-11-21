@@ -2,5 +2,7 @@
 module.exports = [
     '/',
     '/guide/',
-    '/components/' 
+    '/components/',
+    '/chapter2/',
+    '/chapter3/'
   ];
