@@ -6,14 +6,27 @@ module.exports = [
       title: 'Components',
       collapsable: true,
       children: [
-        '/components/',
         '/components/VCard.html',
         '/components/VCheckbox.html',
         '/components/VTextarea.html',
       ]
     },
-    '/chapter2/',
-    '/chapter3/'
+    {
+      title: 'Chapters',
+      collapsable: true,
+      children: [
+        '/chapter2/',
+        '/chapter3/'
+      ]
+    },
+    {
+      title: 'Sections',
+      collapsable: false,
+      children: [
+        '/chapter2/',
+        '/chapter3/'
+      ]
+    }    
   ];
 
   // sidebar: [
