@@ -66,7 +66,7 @@ npx create-nuxt-app app1
 ```
 
 1. This will run you through options and to follow along, choose the options so that your result is as follows:
-   ![alt text](/images/app1-setup.png "Logo Title Text 1")
+   ![alt text](~@images/app1-setup.png "Logo Title Text 1")
 2. Once completed, `cd` into `app1`
 
 ```bash
@@ -80,7 +80,7 @@ yarn dev
 ```
 
 1. View the result at localhost:3000. It should look similar to the following:
-   ![alt text](/images/app1-dev.png "Nuxt Starter Dev")
+   ![alt text](~@images/app1-dev.png "Nuxt Starter Dev")
 2. Quit the development server
 
 ## Nuxt App 2
@@ -100,7 +100,7 @@ npx create-nuxt-app app2
 ```
 
 1. This will run you through a set of options and choose accordingly so your result is as follows:
-   ![alt text](/images/app2-setup.png "Logo Title Text 1")
+   ![alt text](~@images/app2-setup.png "Logo Title Text 1")
 2. Once completed, `cd` into `app2`
 
 ```bash
@@ -114,7 +114,7 @@ yarn dev
 ```
 
 1. View the result at localhost:3000. It should look similar to the following:
-   ![alt text](/images/app2-dev.png "Nuxt Starter Dev")
+   ![alt text](~@images/app2-dev.png "Nuxt Starter Dev")
 2. Quit the development server
 
 ## Nuxt App 3 - NuxtStrap
@@ -138,7 +138,7 @@ npx create-nuxt-app nuxtstrap
 ```
 
 1. This will run you through a set of options and choose accordingly so your result is as follows:
-   ![alt text](/images/nuxtstrap-setup.png "Logo Title Text 1")
+   ![alt text](~@images/nuxtstrap-setup.png "Logo Title Text 1")
 2. Once completed, `cd` into `nuxtstrap` and open it in your editor of choice.
 
 ```bash
@@ -152,7 +152,7 @@ yarn dev
 ```
 
 1. View the result at localhost:3000. It should look similar to the following:
-   ![alt text](/images/nuxtstrap-dev.png "Nuxt Starter Dev")
+   ![alt text](~@images/nuxtstrap-dev.png "Nuxt Starter Dev")
 
 Now we're ready to begin building our application, and will be using NuxtStrap for the remainder of Chapter 2 to do so.
 

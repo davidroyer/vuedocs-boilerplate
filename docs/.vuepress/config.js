@@ -22,5 +22,16 @@ module.exports = {
         // displayAllHeaders: true, // Default: false
         sidebar: sidebarNav,
         // sidebarDepth: 4
-      }    
+      },
+
+      /**
+       * Allows the use of using aliases in markdown
+       */
+      configureWebpack: {
+        resolve: {
+          alias: {
+            '@images': './../images'
+          }
+        }
+      }      
   }

@@ -1,11 +1,20 @@
----
-title: Components
----
 # Components
+
+## v-card 
+
+### slots 
+
+- `body` Use this slot to for the card body, which is the middle area 
+
+- `footer` Use this slot to for the card footer 
+
+### props 
+
+- `heading` ***String*** (*optional*) 
 
 ## v-checkbox 
 
-A simple checkbox component
+A simple checkbox component NEWWW
 
 ```html
 <checkbox v-model="value"/>
@@ -131,9 +140,11 @@ The custom HTML `<textarea>` component.
 
 ### slots 
 
-- `label` Use this slot to set the label 
+- `slotTest` 
 
 ### props 
+
+- `label` ***String*** (*optional*) 
 
 - `v-model` ***String*** (*optional*) 
 
@@ -147,10 +158,6 @@ The custom HTML `<textarea>` component.
 - `disable` ***Boolean*** (*optional*) `default: false` 
 
   This Boolean property indicates that the user cannot interact with the control. 
-
-- `theme` ***Object*** (*optional*) `default: new DefaultTextareaTheme()` 
-
-  Define a custom theme for the component. 
 
 ### events 
 
@@ -175,3 +182,11 @@ The custom HTML `<textarea>` component.
    **return value:** 
 
      - **boolean** - true if empty; otherwise false 
+
+## my-header 
+
+### slots 
+
+- `default` 
+
+- `subheading` Use this slot to set the subheading 

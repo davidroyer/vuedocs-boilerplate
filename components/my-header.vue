@@ -7,8 +7,11 @@
   </div>
 </template>
 <script>
+import mixinA from '../mixins/mixinA'
+
 export default {
-    name: 'my-header'
+    name: 'my-header',
+    mixins: [mixinA]
 }    
 </script>
 <style scoped>
