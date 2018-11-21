@@ -1,0 +1,20 @@
+{
+  "name": "vuedocs-boilerplate",
+  "version": "0.0.0",
+  "description": "Testing for using vuedoc",
+  "main": "index.js",
+  "author": "David Royer",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "t1": "vuedoc.md checkbox.vue --output docs/",
+    "t2": "vuedoc.md components/*.vue --level 2 --section 'Components' --output docs/components/README.md"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@vuepress/plugin-register-components": "^1.0.0-alpha.0",
+    "node-sass": "^4.10.0",
+    "sass-loader": "^7.1.0",
+    "vuepress": "^1.0.0-alpha.23"
+  }
+}
