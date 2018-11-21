@@ -3,14 +3,19 @@
  */
 export default {
     created: function () {
-    /**
-     * Emitted when the component has been created
-     */
-    this.$emit('created')        
+        /**
+         * Emitted when the component has been created
+         */
+        this.$emit('created')
         this.hello()
     },
     props: {
-        mixinProp1: { type: String }
+        /**
+         * A prop from mixinA
+         */
+        mixinProp1: {
+            type: String
+        }
     },
     methods: {
         hello: function () {

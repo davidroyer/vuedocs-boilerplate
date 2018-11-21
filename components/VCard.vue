@@ -2,11 +2,11 @@
   <div class="v-card">
     <div class="v-card-header" v-html="heading"></div>
     <div class="v-card-body">
-      <!-- Use this slot to for the card body, which is the middle area  -->
+      <!-- @slot Use this slot to for the card body, which is the middle area  -->
       <slot name="body"></slot>
     </div>
     <div class="v-card-footer">
-      <!-- Use this slot to for the card footer -->
+      <!-- @slot Use this slot to for the card footer -->
       <slot name="footer"></slot>
     </div>
   </div>
@@ -16,6 +16,9 @@
 export default {
   name: "VCard",
   props: {
+    /**
+     * The text for the heading
+     */
     heading: {
       type: String
     }

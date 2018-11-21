@@ -7,6 +7,7 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
+    "parser": "node docs-generator.js",
     "t1": "vuedoc.md checkbox.vue --output docs/",
     "t2": "vuedoc.md components/*.vue --level 2 --section 'Components' --output docs/components/README.md"
   },
@@ -15,6 +16,10 @@
     "@vuepress/plugin-register-components": "^1.0.0-alpha.0",
     "node-sass": "^4.10.0",
     "sass-loader": "^7.1.0",
+    "vue-docgen-api": "^2.5.2",
     "vuepress": "^1.0.0-alpha.23"
+  },
+  "dependencies": {
+    "readdirp": "^2.2.1"
   }
 }

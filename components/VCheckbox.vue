@@ -8,6 +8,7 @@
 </template>
 
 <script>
+import mixinA from '../mixins/mixinA'
 const dynamic2 = 'dynamicMode'
 const zero = 0
 const nullValue = null
@@ -28,6 +29,7 @@ const boolFalse = false
  */
 export default {
   name: 'VCheckbox',
+  mixins: [mixinA],
   props: {
     /**
      * The checkbox model
@@ -186,6 +188,7 @@ export default {
   
   methods: {
     /**
+     * @public
      * Check if the input is checked
      */
     check () {

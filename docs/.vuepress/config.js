@@ -18,7 +18,22 @@ module.exports = {
           { text: 'Chapter 2', link: '/chapter2/' },
           { text: 'External', link: 'https://google.com' },
         ],
-        // sidebar: 'auto',
+        // sidebar: [
+        //   '/',
+        //   '/guide/',
+        //   {
+        //     title: 'Components',
+        //     collapsable: true,
+        //     children: [
+        //       '/components/',
+        //       '/components/VCard.html',
+        //       '/components/VCheckbox.html',
+        //       '/components/VTextarea.html',
+        //     ]
+        //   },
+        //   '/chapter2/',
+        //   '/chapter3/'          
+        // ]
         // displayAllHeaders: true, // Default: false
         sidebar: sidebarNav,
         // sidebarDepth: 4

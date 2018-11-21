@@ -1,0 +1,240 @@
+{
+    "description": "A simple checkbox component\n\n```html\n<checkbox v-model=\"value\"/>\n```",
+    "methods": [{
+        "name": "check",
+        "comment": "/**\n     * @public\n     * Check if the input is checked\n     */",
+        "modifiers": [],
+        "params": [],
+        "returns": {},
+        "description": "",
+        "tags": {
+            "access": [{
+                "title": "access",
+                "description": "public"
+            }]
+        }
+    }],
+    "displayName": "VCheckbox",
+    "props": {
+        "mixinProp1": {
+            "type": {
+                "name": "string"
+            },
+            "required": "",
+            "tags": {},
+            "comment": "/**\n     * A prop from mixinA\n     */",
+            "description": "A prop from mixinA"
+        },
+        "model": {
+            "type": {
+                "name": "array"
+            },
+            "required": true,
+            "tags": {},
+            "comment": "/**\n     * The checkbox model\n     */",
+            "description": "The checkbox model"
+        },
+        "disabled": {
+            "type": {
+                "name": "boolean"
+            },
+            "tags": {},
+            "comment": "/** \n     * Initial checkbox state\n     */",
+            "description": "Initial checkbox state"
+        },
+        "enabled": {
+            "type": {
+                "name": "boolean"
+            },
+            "required": "",
+            "defaultValue": {
+                "value": "true",
+                "func": false
+            },
+            "tags": {},
+            "comment": "/**\n     * Initial checkbox value\n     */",
+            "description": "Initial checkbox value"
+        },
+        "label": {
+            "type": {
+                "name": "string"
+            },
+            "required": "",
+            "defaultValue": {
+                "value": "\"Unamed checkbox\"",
+                "func": false
+            },
+            "tags": {},
+            "comment": "/**\n     * The checkbox label\n     */",
+            "description": "The checkbox label"
+        },
+        "object": {
+            "type": {
+                "name": "object"
+            },
+            "required": "",
+            "defaultValue": {
+                "value": "null",
+                "func": false
+            },
+            "tags": {},
+            "comment": "",
+            "description": ""
+        },
+        "boolFalse": {
+            "type": {
+                "name": "boolean"
+            },
+            "required": "",
+            "defaultValue": {
+                "value": "false",
+                "func": false
+            },
+            "tags": {},
+            "comment": "",
+            "description": ""
+        },
+        "propWithDefaultAsKeywordButWithoutDefault": {
+            "type": {
+                "name": "object"
+            },
+            "required": "",
+            "tags": {},
+            "comment": "/**\n     * @default {}\n     */",
+            "description": ""
+        },
+        "propWithDefaultAsKeyword": {
+            "type": {
+                "name": "object"
+            },
+            "required": "",
+            "defaultValue": {
+                "value": "() => ({})",
+                "func": true
+            },
+            "tags": {},
+            "comment": "/**\n     * @default {}\n     */",
+            "description": ""
+        },
+        "propWithEmptyDefaultAsKeyword": {
+            "type": {
+                "name": "object"
+            },
+            "required": "",
+            "defaultValue": {
+                "value": "() => ({})",
+                "func": true
+            },
+            "tags": {},
+            "comment": "/**\n     * @default\n     */",
+            "description": ""
+        },
+        "numberPropWithDefaultAsKeyword": {
+            "type": {
+                "name": "number"
+            },
+            "required": "",
+            "defaultValue": {
+                "value": "0",
+                "func": false
+            },
+            "tags": {},
+            "comment": "/**\n     * @default 0\n     */",
+            "description": ""
+        },
+        "stringPropWithDefaultAsKeyword": {
+            "type": {
+                "name": "string"
+            },
+            "required": "",
+            "defaultValue": {
+                "value": "\"\"",
+                "func": false
+            },
+            "tags": {},
+            "comment": "/**\n     * @default ''\n     */",
+            "description": ""
+        },
+        "booleanPropWithDefaultAsKeyword": {
+            "type": {
+                "name": "boolean"
+            },
+            "required": "",
+            "defaultValue": {
+                "value": "false",
+                "func": false
+            },
+            "tags": {},
+            "comment": "/**\n     * @default false\n     */",
+            "description": ""
+        },
+        "arrayPropWithDefaultAsKeyword": {
+            "type": {
+                "name": "array"
+            },
+            "required": "",
+            "defaultValue": {
+                "value": "() => []",
+                "func": true
+            },
+            "tags": {},
+            "comment": "/**\n     * @default empty array\n     */",
+            "description": ""
+        },
+        "functionPropWithDefaultAsKeyword": {
+            "type": {
+                "name": "func"
+            },
+            "required": "",
+            "defaultValue": {
+                "value": "x => x",
+                "func": true
+            },
+            "tags": {},
+            "comment": "/**\n     * @default identity function\n     */",
+            "description": ""
+        },
+        "propWithNullAsDefaultKeyword": {
+            "type": {
+                "name": "object"
+            },
+            "required": "",
+            "defaultValue": {
+                "value": "null",
+                "func": false
+            },
+            "tags": {},
+            "comment": "/**\n     * @default null\n     */",
+            "description": ""
+        },
+        "propWithUndefinedAsDefaultKeyword": {
+            "type": {
+                "name": "object"
+            },
+            "required": "",
+            "tags": {},
+            "comment": "/**\n     * @default undefined\n     */",
+            "description": ""
+        }
+    },
+    "comment": "/**\n * A simple checkbox component\n *\n * ```html\n * <checkbox v-model=\"value\"/>\n * ```\n *\n * @author Sébastien\n * @license MIT\n * @input\n */",
+    "tags": {
+        "author": [{
+            "title": "author",
+            "description": "Sébastien"
+        }],
+        "license": [{
+            "title": "license",
+            "description": "MIT"
+        }]
+    },
+    "events": {},
+    "slots": {
+        "default": {
+            "description": ""
+        },
+        "label": {
+            "description": ""
+        }
+    }
+}
