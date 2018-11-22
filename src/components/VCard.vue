@@ -18,7 +18,6 @@
  * A basic card component that offers 2 slots to use:
  * 1. Card Body
  * 2. Card Footer
- * 3. TESTING BUILDING COMPONENT DOCS ON DEPLOY - FOR NETLIFY
  *
  * ```html
  * <v-card heading="Card Header">
