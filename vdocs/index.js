@@ -42,9 +42,9 @@ function createJsonFile(content) {
 }
 
 function createMarkdownFile(config, filename, mdContent) {
-    console.log(config.outputDir)
+    console.log(config.docsDir)
     try {
-        fs.outputFileSync(`${config.outputDir}/${filename}/README.md`, mdContent, "utf8");
+        fs.outputFileSync(`${config.docsDir}/${filename}/README.md`, mdContent, "utf8");
     } catch (e) {
         console.log("Cannot write file ", e);
     }
@@ -78,18 +78,13 @@ ${defaultIterator(slots)}
     return mdDocContent;
 }
 
-function createComponentsNavFile(navArray) {
-    const dirForFile = './docs/.vuepress'
+function createComponentsNavFile(config, navArray) {
     const fileName = 'components-nav.json'
     try {
-        fs.outputFileSync(`${dirForFile}/${fileName}`, JSON.stringify(navArray), "utf8");
+        fs.outputFileSync(`${config.jsonDir}/${fileName}`, JSON.stringify(navArray), "utf8");
     } catch (e) {
         console.log("Cannot write file ", e);
     }
-}
-
-String.prototype.capitalize = function () {
-    return this.charAt(0).toUpperCase() + this.slice(1)
 }
 
 
@@ -117,9 +112,13 @@ const init = (config = {}) => {
     })
     .on('warn', (warn) => { console.log("Warn: ", warn) })
     .on('error', (err) => { console.log("Error: ", err) })
-    .on('end', () => { createComponentsNavFile(componentsNavArray) });
+    .on('end', () => { createComponentsNavFile(config, componentsNavArray) });
     // In this example, this variable will store all the paths of the files and directories inside the providen path
 }
 
 exports.init = init
 export default init
+
+String.prototype.capitalize = function () {
+    return this.charAt(0).toUpperCase() + this.slice(1)
+}
