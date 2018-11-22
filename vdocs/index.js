@@ -7,18 +7,6 @@ import readdirp from 'readdirp'
 import path from 'path'
 import fs from 'fs-extra'
 
-// const componentsDir = '../src/components'
-// const outputDir = './docs/components'
-
-// const readDirSettings = {
-//     root: path.join(__dirname, componentsDir),
-//     entryType: 'all'
-// };
-    // In this example, this variable will store all the paths of the files and directories inside the providen path
-// let componentsNavArray = [];
-
-// Iterate recursively through a folder
-
 function propsIterator(obj) {
     let propsContent = ``;
     for (const prop in obj) {
@@ -144,13 +132,5 @@ const init = (config = {}) => {
     let componentsNavArray = [];
 }
 
-
-// let config = {
-//     componentsDir: '../src/components',
-//     outputDir: './docs/components'
-// }
-// vDocs.init(config)
-
-// runVDocs(config)
 exports.init = init
 export default init
