@@ -1,5 +1,5 @@
 import fs from 'fs'
-const outputDirectory = './docs/components'
+let outputDirectory = './docs/components'
 
 export function propsIterator(obj) {
     let propsContent = ``;

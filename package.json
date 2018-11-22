@@ -7,19 +7,24 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "vdocs": "npx babel-node --presets es2015 vdocs",
+    "vdocs:gen": "npx babel-node --presets es2015 vdocs",
+    "vdocs:build": "npx babel vdocs --out-file vdocs.min.js",
     "t1": "vuedoc.md checkbox.vue --output docs/",
     "t2": "vuedoc.md components/*.vue --level 2 --section 'Components' --output docs/components/README.md"
   },
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.1.6",
     "@vuepress/plugin-register-components": "^1.0.0-alpha.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
     "node-sass": "^4.10.0",
     "sass-loader": "^7.1.0",
     "vue-docgen-api": "^2.5.2",
     "vuepress": "^1.0.0-alpha.23"
   },
   "dependencies": {
+    "@babel/preset-env": "^7.1.6",
     "readdirp": "^2.2.1"
   }
 }
