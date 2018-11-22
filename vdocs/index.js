@@ -1,7 +1,3 @@
-// import {
-//     createMarkdownContent,
-//     createMarkdownFile,
-// } from './core/generator'
 import * as vueDocs from 'vue-docgen-api'
 import readdirp from 'readdirp'
 import path from 'path'
@@ -23,8 +19,6 @@ function propsIterator(obj) {
     return propsContent
 }
 
-
-
 function defaultIterator(obj) {
     let content = ``;
     for (const propKey in obj) {
@@ -37,7 +31,6 @@ ${info.description}
     }
     return content
 }
-
 
 function createJsonFile(content) {
     // console.log(content);
@@ -101,21 +94,20 @@ String.prototype.capitalize = function () {
 
 
 const init = (config = {}) => {
-
     const {componentsDir, outputDir} = config
-
     const readDirSettings = {
         root: path.resolve(componentsDir),
         entryType: 'all'
     };
     console.log('root: ', readDirSettings.root)
+
+    let componentsNavArray = [];
+
     readdirp(readDirSettings)
     .on('data', function (entry) {
         const { name, path } = entry
         // execute everytime a file is found in the providen directory
         if (entry.name.endsWith('.vue')) {
-            let navFileName = name.replace('.vue', '')
-
             let mdFileName = name.replace('.vue', '')
             var componentInfo = vueDocs.parse(`${readDirSettings.root}/${path}`)
             let mdContent = createMarkdownContent(componentInfo);
@@ -126,10 +118,7 @@ const init = (config = {}) => {
     .on('warn', (warn) => { console.log("Warn: ", warn) })
     .on('error', (err) => { console.log("Error: ", err) })
     .on('end', () => { createComponentsNavFile(componentsNavArray) });
-
-
     // In this example, this variable will store all the paths of the files and directories inside the providen path
-    let componentsNavArray = [];
 }
 
 exports.init = init
