@@ -7,45 +7,17 @@ import readdirp from 'readdirp'
 import path from 'path'
 import fs from 'fs-extra'
 
-const componentsDirectory = '../src/components'
-const outputDirectory = './docs/components'
-const readDirSettings = {
-    root: path.join(__dirname, componentsDirectory),
-    entryType: 'all'
-};
+// const componentsDir = '../src/components'
+// const outputDir = './docs/components'
 
-// In this example, this variable will store all the paths of the files and directories inside the providen path
-let componentsNavArray = [];
+// const readDirSettings = {
+//     root: path.join(__dirname, componentsDir),
+//     entryType: 'all'
+// };
+    // In this example, this variable will store all the paths of the files and directories inside the providen path
+// let componentsNavArray = [];
 
 // Iterate recursively through a folder
-readdirp(readDirSettings)
-    .on('data', function (entry) {
-        const {
-            name,
-            path
-        } = entry
-        // execute everytime a file is found in the providen directory
-        if (entry.name.endsWith('.vue')) {
-            let navFileName = name.replace('.vue', '')
-
-            let mdFileName = name.replace('.vue', '')
-            var componentInfo = vueDocs.parse(`${readDirSettings.root}/${path}`)
-            let mdContent = createMarkdownContent(componentInfo);
-            createMarkdownFile(mdFileName, mdContent);
-            componentsNavArray.push(`/components/${mdFileName}/`)
-        }
-    })
-    .on('warn', (warn) => {
-        console.log("Warn: ", warn);
-    })
-    .on('error', (err) => {
-        console.log("Error: ", err);
-    })
-    .on('end', () => {
-        console.log('Done!');
-        console.log('NAV', componentsNavArray)
-        createComponentsNavFile(componentsNavArray)
-    });
 
 function propsIterator(obj) {
     let propsContent = ``;
@@ -88,10 +60,10 @@ function createJsonFile(content) {
     }
 }
 
-function createMarkdownFile(filename, mdContent) {
-    // console.log(content);
+function createMarkdownFile(config, filename, mdContent) {
+    console.log(config.outputDir)
     try {
-        fs.outputFileSync(`${outputDirectory}/${filename}/README.md`, mdContent, "utf8");
+        fs.outputFileSync(`${config.outputDir}/${filename}/README.md`, mdContent, "utf8");
     } catch (e) {
         console.log("Cannot write file ", e);
     }
@@ -129,7 +101,7 @@ function createComponentsNavFile(navArray) {
     const dirForFile = './docs/.vuepress'
     const fileName = 'components-nav.json'
     try {
-        fs.writeFileSync(`${dirForFile}/${fileName}`, JSON.stringify(navArray), "utf8");
+        fs.outputFileSync(`${dirForFile}/${fileName}`, JSON.stringify(navArray), "utf8");
     } catch (e) {
         console.log("Cannot write file ", e);
     }
@@ -138,3 +110,47 @@ function createComponentsNavFile(navArray) {
 String.prototype.capitalize = function () {
     return this.charAt(0).toUpperCase() + this.slice(1)
 }
+
+
+const init = (config = {}) => {
+
+    const {componentsDir, outputDir} = config
+
+    const readDirSettings = {
+        root: path.resolve(componentsDir),
+        entryType: 'all'
+    };
+    console.log('root: ', readDirSettings.root)
+    readdirp(readDirSettings)
+    .on('data', function (entry) {
+        const { name, path } = entry
+        // execute everytime a file is found in the providen directory
+        if (entry.name.endsWith('.vue')) {
+            let navFileName = name.replace('.vue', '')
+
+            let mdFileName = name.replace('.vue', '')
+            var componentInfo = vueDocs.parse(`${readDirSettings.root}/${path}`)
+            let mdContent = createMarkdownContent(componentInfo);
+            createMarkdownFile(config, mdFileName, mdContent);
+            componentsNavArray.push(`/components/${mdFileName}/`)
+        }
+    })
+    .on('warn', (warn) => { console.log("Warn: ", warn) })
+    .on('error', (err) => { console.log("Error: ", err) })
+    .on('end', () => { createComponentsNavFile(componentsNavArray) });
+
+
+    // In this example, this variable will store all the paths of the files and directories inside the providen path
+    let componentsNavArray = [];
+}
+
+
+// let config = {
+//     componentsDir: '../src/components',
+//     outputDir: './docs/components'
+// }
+// vDocs.init(config)
+
+// runVDocs(config)
+exports.init = init
+export default init

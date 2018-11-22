@@ -5,10 +5,14 @@
   "main": "index.js",
   "author": "David Royer",
   "scripts": {
+    "clean": "rm vdocs/dist/*",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
+    "docs:build": "yarn vdocs:generate && vuepress build docs",
     "vdocs:gen": "npx babel-node --presets es2015 vdocs",
-    "vdocs:build": "npx babel vdocs --out-file vdocs.min.js",
+    "vdocs:build": "yarn clean && npx babel vdocs --out-file vdocs/dist/vdocs.min.js --presets es2015",
+    "vdocs:test": "node vdocs-test.js",
+    "vdocs:generate": "node vdocs-test.js",
+    "vdocs:backup": "npx babel-node --presets es2015 vdocs",
     "t1": "vuedoc.md checkbox.vue --output docs/",
     "t2": "vuedoc.md components/*.vue --level 2 --section 'Components' --output docs/components/README.md"
   },
