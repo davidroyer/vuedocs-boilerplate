@@ -6,7 +6,7 @@ module.exports = {
     description: 'Working on a docs system to be used for Vue libraries and plugins',
     plugins: [
       ['@vuepress/register-components', {
-        componentsDir: './components'
+        componentsDir: '.src/components'
       }]
     ],      
     themeConfig: {

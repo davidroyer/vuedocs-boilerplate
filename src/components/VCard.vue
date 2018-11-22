@@ -16,9 +16,8 @@
 
 /**
  * A basic card component that offers 2 slots to use:
- * 1. Card Header
- * 2. Card Body
- * 3. Card Footer
+ * 1. Card Body
+ * 2. Card Footer
  *
  * ```html
  * <v-card heading="Card Header">

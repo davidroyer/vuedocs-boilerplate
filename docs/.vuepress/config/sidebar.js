@@ -1,15 +1,11 @@
-
+const componentsNav = require('../components-nav.json')
 module.exports = [
     '/',
     '/guide/',
     {
       title: 'Components',
       collapsable: true,
-      children: [
-        '/components/VCard.html',
-        '/components/VCheckbox.html',
-        '/components/VTextarea.html',
-      ]
+      children: componentsNav
     },
     {
       title: 'Chapters',
