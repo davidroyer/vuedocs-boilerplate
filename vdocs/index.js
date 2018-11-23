@@ -3,6 +3,26 @@ import readdirp from 'readdirp'
 import path from 'path'
 import fs from 'fs-extra'
 
+function isEmptyObj(obj) {
+    for(var key in obj) {
+        if(obj.hasOwnProperty(key))
+            return false;
+    }
+    return true;
+}
+
+const descriptionItem = (item) => {
+    return `
+- \`${item.name}\`
+
+  ${item.description}      
+`;
+}
+
+const methodsIterator = (methods) => {
+    return methods.map((method) => descriptionItem(method) )
+}
+
 function propsIterator(obj) {
     let propsContent = ``;
     for (const prop in obj) {
@@ -10,32 +30,47 @@ function propsIterator(obj) {
             description,
             type
         } = obj[prop]
-        propsContent += `- \`${prop}\` ***${type.name.capitalize()}***
-    
-    ${description}
+        propsContent += `
+- \`${prop}\` ***${type.name.capitalize()}***
 
+  ${description}
 `;
     }
     return propsContent
 }
 
-function defaultIterator(obj) {
-    let content = ``;
-    for (const propKey in obj) {
-
-        let info = obj[propKey]
-        content += `- \`${propKey}\`
-${info.description}
-
-`;
+function methodsTemplate(methods) {
+    if (methods.length > 0) {
+        return `
+## Methods
+${methodsIterator(methods)}
+`
     }
-    return content
+    else return ''
 }
 
-function createJsonFile(content) {
+function defaultTemplate(title, obj) {
+    if (isEmptyObj(obj)) return ''
+    else {
+        let content = `## ${title}`;
+
+        for (const propKey in obj) {
+            let item = {
+                name: propKey,
+                description: obj[propKey]['description']
+            }
+            content += descriptionItem(item);
+        }
+        return content        
+    }
+}
+
+
+function createJsonFile(config, filename, content) {
     // console.log(content);
     try {
-        fs.writeFileSync("OUTPUT.json", JSON.stringify(content), "utf8");
+        // fs.writeFileSync("OUTPUT.json", JSON.stringify(content), "utf8");
+        fs.outputFileSync(`${config.docsDir}/${filename}/documentation.json`, JSON.stringify(content), "utf8");
     } catch (e) {
         console.log("Cannot write file ", e);
     }
@@ -60,20 +95,19 @@ function createMarkdownContent(content) {
         slots
     } = content;
 
-    let mdDocContent = `# ${displayName}
+    let mdDocContent = `
+# ${displayName}
 ${description}
 
 ## Props
 
 ${propsIterator(props)}
 
-## Events
+${defaultTemplate('Slots', slots)}
 
-${defaultIterator(events)}
+${defaultTemplate('Events', events)}
 
-## Slots
-
-${defaultIterator(slots)}
+${methodsTemplate(methods)}
 `;
     return mdDocContent;
 }
@@ -104,8 +138,10 @@ const init = (config = {}) => {
         // execute everytime a file is found in the providen directory
         if (entry.name.endsWith('.vue')) {
             let mdFileName = name.replace('.vue', '')
-            var componentInfo = vueDocs.parse(`${readDirSettings.root}/${path}`)
+            let componentInfo = vueDocs.parse(`${readDirSettings.root}/${path}`)
             let mdContent = createMarkdownContent(componentInfo);
+            
+            createJsonFile(config, mdFileName, componentInfo)
             createMarkdownFile(config, mdFileName, mdContent);
             componentsNavArray.push(`/components/${mdFileName}/`)
         }

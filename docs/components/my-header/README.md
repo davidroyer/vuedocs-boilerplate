@@ -1,3 +1,4 @@
+
 # my-header
 A header component
 
@@ -10,22 +11,22 @@ A header component
 
 ## Props
 
+
 - `mixinProp1` ***String***
-    
-    A prop from mixinA
 
-
-
-## Events
-
+  A prop from mixinA
 
 
 ## Slots
-
 - `default`
 
+        
 
 - `subheading`
-Use this slot to set the subheading
+
+  Use this slot to set the subheading      
+
+
+
 
 

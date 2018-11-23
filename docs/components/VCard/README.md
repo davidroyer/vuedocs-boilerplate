@@ -1,3 +1,4 @@
+
 # VCard
 A basic card component that offers 2 slots to use:
 1. Card Body
@@ -12,22 +13,22 @@ A basic card component that offers 2 slots to use:
 
 ## Props
 
+
 - `heading` ***String***
-    
-    The text for the heading
 
-
-
-## Events
-
+  The text for the heading
 
 
 ## Slots
-
 - `body`
-Use this slot to for the card body, which is the middle area
+
+  Use this slot to for the card body, which is the middle area      
 
 - `footer`
-Use this slot to for the card footer
+
+  Use this slot to for the card footer      
+
+
+
 
 
