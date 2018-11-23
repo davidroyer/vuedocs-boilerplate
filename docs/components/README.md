@@ -1,20 +1,41 @@
 # Components
 
+## v-base-comp 
+
+- **mixin** 
+
+### props 
+
+- `question` ***String*** (*optional*) `default: 'Default Question'` 
+
 ## v-card 
+
+A basic card component that offers 2 slots to use:
+1. Card Body
+2. Card Footer
+
+```html
+<v-card heading="Card Header">
+<div slot="body">Card Body<p>Some content for the body you your card</p></div>
+<div slot="footer">Card Footer</div>
+</v-card>
+``` 
 
 ### slots 
 
-- `body` Use this slot to for the card body, which is the middle area 
+- `body` @slot Use this slot to for the card body, which is the middle area 
 
-- `footer` Use this slot to for the card footer 
+- `footer` @slot Use this slot to for the card footer 
 
 ### props 
 
 - `heading` ***String*** (*optional*) 
 
+  The text for the heading 
+
 ## v-checkbox 
 
-A simple checkbox component
+A simple checkbox component NEW FOR VUEDOC.MD
 
 ```html
 <checkbox v-model="value"/>
@@ -26,9 +47,7 @@ A simple checkbox component
 
 ### slots 
 
-- `default` 
-
-- `label` Use this slot to set the checkbox label 
+- `label` @slot Use this slot to set the checkbox label 
 
 ### props 
 
@@ -131,12 +150,100 @@ A simple checkbox component
 
   Enable the checkbox 
 
+## v-extended-comp 
+
+Description Extended component from `VBaseComp` 
+
+### props 
+
+- `placeholder` ***String*** (*optional*) 
+
+## v-grid 
+
+This is an example of creating a reusable grid component and using it with external data. 
+
+- **version** - 1.0.5 
+- **author** - [Rafael](https://github.com/rafaesc92) 
+- **since** - Version 1.0.1 
+
+### slots 
+
+- `header` @slot Use this slot header 
+
+- `footer` @slot Use this slot footer 
+
+### props 
+
+- `msg` ***String|Number*** (*optional*) `default: 'text'` 
+
+  object/array defaults should be returned from a factory function 
+
+- `data` ***Array*** (*optional*) 
+
+  describe data 
+
+- `images` ***Array*** (*optional*) `default: [object Object]` 
+
+- `prop-func` ***[object Object]*** (*optional*) `default: [object Object]` 
+
+  prop function 
+
+- `columns` ***ArrayExpression*** (*optional*) 
+
+  get columns list 
+
+- `filter-key` ***String*** (*optional*) `default: 'example'` 
+
+  filter key 
+
+### data 
+
+- `sortKey` 
+
+**initial value:** `''` 
+
+- `sortOrders` 
+
+**initial value:** `'sortOrders'` 
+
+### computed properties 
+
+- `filteredData` 
+
+   **dependencies:** `sortKey`, `filterKey`, `filterKey`, `sortOrders`, `data` 
+
+### events 
+
+- `success` 
+
+  Success event. 
+
+- `error` 
+
+  Error event. 
+
+### methods 
+
+- `sortBy(key)` 
+
+  Sets the order 
+
+  **parameters:** 
+
+     - `key` **string** - Key to order 
+
+   **return value:** 
+
+     - **string** - Test 
+- `hiddenMethod()` 
+
 ## v-textarea 
 
-The custom HTML `<textarea>` component. 
+The custom HTML `<textarea>` component.
 
-- **author** - Sébastien 
-- **license** - MIT 
+```html
+<v-textarea id="text" label="Text"/>
+``` 
 
 ### slots 
 
@@ -185,8 +292,39 @@ The custom HTML `<textarea>` component.
 
 ## my-header 
 
+A header component
+
+```html
+<my-header>
+Some Important Heading
+<h2 slot="subheading">Subheading Slot</h2>
+</my-header>
+``` 
+
 ### slots 
 
 - `default` 
 
-- `subheading` Use this slot to set the subheading 
+- `subheading` @slot Use this slot to set the subheading 
+
+# Mixins
+
+## mixin-a 
+
+- **mixin** 
+
+### props 
+
+- `mixin-prop1` ***String*** (*optional*) 
+
+  A prop from mixinA 
+
+### events 
+
+- `created` 
+
+  Emitted when the component has been created 
+
+### methods 
+
+- `hello()` 

@@ -1,9 +1,8 @@
 <template>
   <label>
+    <!-- @slot Use this slot to set the checkbox label -->
+    <slot name="label"></slot>    
     <input :disabled="disabled" type="text" v-model="checkbox">
-    <slot></slot>
-    <!-- Use this slot to set the checkbox label -->
-    <slot name="label"></slot>
   </label>
 </template>
 
@@ -17,10 +16,10 @@ const emptyString = ''
 const boolFalse = false
 
 /**
- * A simple checkbox component
+ * A simple checkbox component NEW FOR
  *
  * ```html
- * <checkbox v-model="value"/>
+ * <v-checkbox v-model="value"/>
  * ```
  *
  * @author Sébastien
@@ -172,6 +171,7 @@ export default {
     /**
      * The component identifier.
      * Generated using the `initialValue` data.
+     * @public
      */
     id () {
       return `checkbox-${this.initialValue}`
@@ -187,9 +187,10 @@ export default {
   },
   
   methods: {
+    
     /**
-     * @public
      * Check if the input is checked
+     * @public
      */
     check () {
       console.log('check')

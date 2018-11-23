@@ -1,5 +1,4 @@
 <template>
-
 	<!-- @slot Use this slot header -->
 	<slot name="header"></slot>
 	<table class="grid">

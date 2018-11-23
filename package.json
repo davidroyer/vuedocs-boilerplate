@@ -14,7 +14,8 @@
     "vdocs:generate": "node vdocs-test.js",
     "vdocs:backup": "npx babel-node --presets es2015 vdocs",
     "t1": "vuedoc.md checkbox.vue --output docs/",
-    "t2": "vuedoc.md components/*.vue --level 2 --section 'Components' --output docs/components/README.md"
+    "t2": "vuedoc.md src/components/*.vue --level 2 --section 'Components' --output docs/components/README.md",
+    "t3": "vuedoc.md src/mixins/*.js --level 2 --section 'Mixins' --output docs/components/README.md"
   },
   "license": "MIT",
   "devDependencies": {
@@ -29,6 +30,8 @@
   },
   "dependencies": {
     "@babel/preset-env": "^7.1.6",
+    "@vuedoc/md": "^1.5.0",
+    "@vuedoc/parser": "^1.4.0",
     "fs-extra": "^7.0.1",
     "readdirp": "^2.2.1"
   }

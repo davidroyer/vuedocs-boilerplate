@@ -1,91 +1,121 @@
 
 # VCheckbox
-A simple checkbox component
+A simple checkbox component NEW FOR
 
 ```html
-<checkbox v-model="value"/>
+<v-checkbox v-model="value"/>
 ```
 
 ## Props
 
 
-- `mixinProp1` ***String***
+- `mixinProp1` *String*
 
   A prop from mixinA
 
-- `model` ***Array***
+  
+
+- `model` *Array*
 
   The checkbox model
 
-- `disabled` ***Boolean***
+  
+
+- `disabled` *Boolean*
 
   Initial checkbox state
 
-- `enabled` ***Boolean***
+  
+
+- `enabled` *Boolean*
 
   Initial checkbox value
 
-- `label` ***String***
+  **Default:**  true
+
+- `label` *String*
 
   The checkbox label
 
-- `object` ***Object***
+  **Default:**  "Unamed checkbox"
+
+- `object` *Object*
 
   
 
-- `boolFalse` ***Boolean***
+  **Default:**  null
+
+- `boolFalse` *Boolean*
 
   
 
-- `propWithDefaultAsKeywordButWithoutDefault` ***Object***
+  **Default:**  false
+
+- `propWithDefaultAsKeywordButWithoutDefault` *Object*
 
   
 
-- `propWithDefaultAsKeyword` ***Object***
+  
+
+- `propWithDefaultAsKeyword` *Object*
 
   
 
-- `propWithEmptyDefaultAsKeyword` ***Object***
+  **Default:**  () => ({})
+
+- `propWithEmptyDefaultAsKeyword` *Object*
 
   
 
-- `numberPropWithDefaultAsKeyword` ***Number***
+  **Default:**  () => ({})
+
+- `numberPropWithDefaultAsKeyword` *Number*
 
   
 
-- `stringPropWithDefaultAsKeyword` ***String***
+  **Default:**  0
+
+- `stringPropWithDefaultAsKeyword` *String*
 
   
 
-- `booleanPropWithDefaultAsKeyword` ***Boolean***
+  **Default:**  ""
+
+- `booleanPropWithDefaultAsKeyword` *Boolean*
 
   
 
-- `arrayPropWithDefaultAsKeyword` ***Array***
+  **Default:**  false
+
+- `arrayPropWithDefaultAsKeyword` *Array*
 
   
 
-- `functionPropWithDefaultAsKeyword` ***Func***
+  **Default:**  () => []
+
+- `functionPropWithDefaultAsKeyword` *Func*
 
   
 
-- `propWithNullAsDefaultKeyword` ***Object***
+  **Default:**  x => x
+
+- `propWithNullAsDefaultKeyword` *Object*
 
   
 
-- `propWithUndefinedAsDefaultKeyword` ***Object***
+  **Default:**  null
+
+- `propWithUndefinedAsDefaultKeyword` *Object*
+
+  
 
   
 
 
 ## Slots
-- `default`
-
-        
-
 - `label`
 
-        
+  Use this slot to set the checkbox label      
 
 
 
@@ -95,6 +125,6 @@ A simple checkbox component
 
 - `check`
 
-        
+  Check if the input is checked      
 
 

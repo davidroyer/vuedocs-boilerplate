@@ -1,6 +1,6 @@
 
 # VCard
-A basic card component that offers 2 slots to use: NEWWW FOR CONFIG.JS
+A basic card component that offers 2 slots to use:
 1. Card Body
 2. Card Footer
 
@@ -14,9 +14,11 @@ A basic card component that offers 2 slots to use: NEWWW FOR CONFIG.JS
 ## Props
 
 
-- `heading` ***String***
+- `heading` *String*
 
   The text for the heading
+
+  
 
 
 ## Slots
