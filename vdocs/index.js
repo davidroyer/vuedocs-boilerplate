@@ -35,7 +35,7 @@ function propsIterator(obj) {
 
   ${description}
 
-  ${obj[prop]['defaultValue'] ? '**Default:**  ' + obj[prop]['defaultValue']['value'] : ''}
+  ${obj[prop]['defaultValue'] ? '**Default: **  ' + obj[prop]['defaultValue']['value'] : ''}
 `;
     }
     return propsContent
