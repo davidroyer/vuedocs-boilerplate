@@ -5,7 +5,7 @@ import VBaseComp from './VBaseComp.vue'
  * An example extended component that has been extended by another component
  *
  * ```html
- * <v-base-comp sample-text="Some Special Heading"/>
+ * <v-extended-comp sample-text="Extended Component Sample Text"/>
  * ```
  * @mixin
  */
