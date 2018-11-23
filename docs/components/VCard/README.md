@@ -1,12 +1,12 @@
 
 # VCard
-A basic card component that offers 2 slots to use:
+A basic card component that offers 2 slots to use: NEWWW FOR CONFIG.JS
 1. Card Body
 2. Card Footer
 
 ```html
 <v-card heading="Card Header">
- <div slot="body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eius corrupti a sint recusandae neque dolorum distinctio cupiditate. Unde non, odit praesentium odio, voluptate laboriosam eos quod vero ipsa nemo.</div>
+ <div slot="body">Card Body<p>Some content for the body you your card</p></div>
  <div slot="footer">Card Footer</div>
 </v-card>
 ```

@@ -1,5 +1,4 @@
 const sidebarNav = require('./config/sidebar')
-const componentsPath = './../../components'
 
 module.exports = {
     title: 'VueDocs',
