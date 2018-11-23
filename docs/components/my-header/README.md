@@ -12,11 +12,9 @@ A header component
 ## Props
 
 
-- `mixinProp1` *String*
+- `mixinProp1` ***String***
 
   A prop from mixinA
-
-  
 
 
 ## Slots

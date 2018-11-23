@@ -9,105 +9,71 @@ A simple checkbox component NEW FOR
 ## Props
 
 
-- `mixinProp1` *String*
+- `mixinProp1` ***String***
 
   A prop from mixinA
 
-  
-
-- `model` *Array*
+- `model` ***Array***
 
   The checkbox model
 
-  
-
-- `disabled` *Boolean*
+- `disabled` ***Boolean***
 
   Initial checkbox state
 
-  
-
-- `enabled` *Boolean*
+- `enabled` ***Boolean***
 
   Initial checkbox value
 
-  **Default:**  true
-
-- `label` *String*
+- `label` ***String***
 
   The checkbox label
 
-  **Default:**  "Unamed checkbox"
-
-- `object` *Object*
+- `object` ***Object***
 
   
 
-  **Default:**  null
-
-- `boolFalse` *Boolean*
+- `boolFalse` ***Boolean***
 
   
 
-  **Default:**  false
-
-- `propWithDefaultAsKeywordButWithoutDefault` *Object*
+- `propWithDefaultAsKeywordButWithoutDefault` ***Object***
 
   
 
-  
-
-- `propWithDefaultAsKeyword` *Object*
+- `propWithDefaultAsKeyword` ***Object***
 
   
 
-  **Default:**  () => ({})
-
-- `propWithEmptyDefaultAsKeyword` *Object*
+- `propWithEmptyDefaultAsKeyword` ***Object***
 
   
 
-  **Default:**  () => ({})
-
-- `numberPropWithDefaultAsKeyword` *Number*
+- `numberPropWithDefaultAsKeyword` ***Number***
 
   
 
-  **Default:**  0
-
-- `stringPropWithDefaultAsKeyword` *String*
+- `stringPropWithDefaultAsKeyword` ***String***
 
   
 
-  **Default:**  ""
-
-- `booleanPropWithDefaultAsKeyword` *Boolean*
+- `booleanPropWithDefaultAsKeyword` ***Boolean***
 
   
 
-  **Default:**  false
-
-- `arrayPropWithDefaultAsKeyword` *Array*
+- `arrayPropWithDefaultAsKeyword` ***Array***
 
   
 
-  **Default:**  () => []
-
-- `functionPropWithDefaultAsKeyword` *Func*
+- `functionPropWithDefaultAsKeyword` ***Func***
 
   
 
-  **Default:**  x => x
-
-- `propWithNullAsDefaultKeyword` *Object*
+- `propWithNullAsDefaultKeyword` ***Object***
 
   
 
-  **Default:**  null
-
-- `propWithUndefinedAsDefaultKeyword` *Object*
-
-  
+- `propWithUndefinedAsDefaultKeyword` ***Object***
 
   
 

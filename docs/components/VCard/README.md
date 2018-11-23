@@ -14,11 +14,9 @@ A basic card component that offers 2 slots to use:
 ## Props
 
 
-- `heading` *String*
+- `heading` ***String***
 
   The text for the heading
-
-  
 
 
 ## Slots

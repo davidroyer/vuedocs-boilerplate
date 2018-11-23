@@ -5,41 +5,29 @@ This is an example of creating a reusable grid component and using it with exter
 ## Props
 
 
-- `msg` *String|number*
+- `msg` ***String|number***
 
   object/array defaults should be returned from a factory function
 
-  
-
-- `data` *Array*
+- `data` ***Array***
 
   describe data
 
-  
-
-- `images` *Array*
+- `images` ***Array***
 
   
 
-  **Default:**  function() { return [{}]; }
-
-- `propFunc` *Func*
+- `propFunc` ***Func***
 
   prop function
 
-  **Default:**  function() {}
-
-- `columns` *Array*
+- `columns` ***Array***
 
   get columns list
 
-  
-
-- `filterKey` *String*
+- `filterKey` ***String***
 
   filter key
-
-  **Default:**  "example"
 
 
 ## Slots
