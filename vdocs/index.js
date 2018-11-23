@@ -23,6 +23,10 @@ const methodsIterator = (methods) => {
     return methods.map((method) => descriptionItem(method) )
 }
 
+
+// SAVE FOR LATER
+// ${obj[prop]['defaultValue'] ? '**Default: **  ' + obj[prop]['defaultValue']['value'] : ''}
+
 function propsIterator(obj) {
     let propsContent = ``;
     for (const prop in obj) {
@@ -31,11 +35,9 @@ function propsIterator(obj) {
             type
         } = obj[prop]
         propsContent += `
-- \`${prop}\` (*${type.name.capitalize()}*)
+- \`${prop}\` ***${type.name.capitalize()}***
 
   ${description}
-
-  ${obj[prop]['defaultValue'] ? '**Default: **  ' + obj[prop]['defaultValue']['value'] : ''}
 `;
     }
     return propsContent
